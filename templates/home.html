@@ -1,0 +1,84 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block title %} mahi {% endblock title %} 
+
+{% block hero %}
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <section id="contact" class="contact section dark-background">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-auto position-relative">
+                <!-- Image -->
+                <img src="{% static 'assets/img/mahendra..jpg' %}" alt="Mahendra Bandla" class="img-fluid">
+                <!-- Overlay text -->
+                <div class="overlay-text-middle">
+                    <h3>Mahendra Bandla</h3>
+                    <p>I'm <span class="typed" data-typed-items="Fullstack Developer">Django Developer</span>
+                      <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+                  </p>
+                    <!-- Contact details -->
+                    <div class="contact-info">
+                        <p>Phone: +91-8884799083</p>
+                        <p>Email: bandlamahendra26@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.position-relative {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay-text-middle {
+    position: absolute;
+    top: 67%;
+    left: 67%;
+    transform: translate(-50%, -50%); /* Center the text vertically and horizontally */
+    color: white;
+    text-align: center;
+    /* No background color applied here */
+}
+
+.contact-info {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contact details */
+    padding: 10px; /* Padding around the contact details */
+    border-radius: 8px; /* Rounded corners for contact details background */
+    margin-top: 10px; /* Space between the main content and contact details */
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 16px;
+    color: white; /* Color of the contact text */
+}
+
+    </section><!-- /Hero Section -->
+
+
+{% endblock hero %}
+
+{% block body %}
+
+ {% for message in  messages %}
+      <div class="alert alert-{{messages.tags}} alert-dismissible fade show" role="alert">
+      <strong>{{message}}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+
+{% endblock body %}
+
+ {% for message in  messages %}
+      <div class="alert alert-{{messages.tags}} alert-dismissible fade show" role="alert">
+      <strong>{{message}}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+
+
+

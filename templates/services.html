@@ -1,0 +1,140 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block title %} Services{% endblock title %} 
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+        .services {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #ffffff, #f4f4f4);
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .services h2 {
+            font-size: 42px;
+            color: #333;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        .service-item {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .service-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #00bfff, #1e90ff);
+            border-radius: 10px 10px 0 0;
+        }
+        .service-item h3 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .service-item p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .service-icon {
+            font-size: 40px;
+            color: #1e90ff;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <section id="services" class="services">
+        <div class="container text-center">
+            <h2>Our Services</h2>
+            
+            <div class="service-item">
+                <div class="service-icon">📝</div>
+                <a href="/custom_blog" class="active"><h3>Custom Blog Applications</h3></a>
+                <p>
+                    Design and develop engaging blog platforms with user authentication, content management, and interactive features to create a unique blogging experience.
+                </p>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">🛒</div>
+                <a href="/ecom" class="active"><h3>E-commerce Websites</h3>
+                <p>
+                    Build robust online stores with features like product catalogs, shopping carts, secure payment processing, and efficient order management systems.
+                </p>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">💼</div>
+                <h3>Portfolio and Business Websites</h3>
+                <p>
+                    Create professional websites for showcasing individual portfolios or business services with interactive designs and user-friendly interfaces.
+                </p>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">🌐</div>
+                <h3>Social Networking Platforms</h3>
+                <p>
+                    Develop social networking sites with features like user profiles, messaging systems, friend connections, and community interactions.
+                </p>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">🗂️</div>
+                <h3>Content Management Systems (CMS)</h3>
+                <p>
+                    Implement custom CMS solutions to manage content efficiently with features like admin panels, content creation tools, and media management.
+                </p>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">⚙️</div>
+                <h3>Custom Web Applications</h3>
+                <p>
+                    Develop tailored web applications designed to meet specific business needs or solve unique problems with custom functionalities.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+{% endblock body %}

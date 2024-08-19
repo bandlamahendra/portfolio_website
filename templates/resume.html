@@ -1,0 +1,157 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block title %} resume {% endblock title %} 
+
+{% block body %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahendra Bandla - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .contact-info, .skills, .experience, .projects {
+            margin-bottom: 20px;
+        }
+        .contact-info p, .skills p, .experience p, .projects p {
+            margin: 5px 0;
+        }
+        .projects .project-item {
+            margin-bottom: 15px;
+        }
+        .project-item h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .project-item p {
+            margin: 10px 0;
+        }
+        footer {
+            background: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mahendra Bandla</h1>
+        <p>Python Developer</p>
+    </header>
+
+    <div class="container">
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email ID: <a href="mailto:bandlamahendra26@gmail.com">bandlamahendra26@gmail.com</a></p>
+            <p>Mobile No: +91 8884799083</p>
+        </section>
+
+        <section class="professional-summary">
+            <h2>Professional Summary</h2>
+            <p>● Having around 2.9+ years of IT Experience as a Software Engineer and Python Developer.</p>
+            <p>● Good working knowledge of Flask, Django, PostgreSQL, MySQL, Rapid SQL, and Shell scripting.</p>
+            <p>● Strong knowledge of OOP concepts.</p>
+            <p>● Expertise in establishing database connections for Python by configuring packages like MySQL-python.</p>
+            <p>● Experience with tools like Docker, GIT, Bitbucket, and Kafka.</p>
+            <p>● Good knowledge of web technologies such as HTML, CSS, and JavaScript.</p>
+            <p>● Ability to handle multiple tasks and work independently as well as in a team.</p>
+            <p>● Experience in debugging, design, implementation, and testing.</p>
+            <p>● Proven ability to work independently, take ownership, and deliver quality products on time.</p>
+        </section>
+
+        <section class="experience">
+            <h2>Working Experience</h2>
+            <p><strong>Python Developer at L&T Mindtree</strong> (Bangalore, Oct 2021 - Present)</p>
+            <p>Responsibilities include interacting with clients for requirement analysis, participating in scrum and stand-up calls, working in Agile development, implementing test cases using unit test and mock frameworks, code reviews and refactoring, and writing server-side web application logic using Python.</p>
+        </section>
+
+        <section class="education">
+            <h2>Educational Details</h2>
+            <p>Completed Bachelor of Computer Science from Sri Krishna Chaitanya Degree College, Vikram Simhapuri University, Nellore, Andhra Pradesh.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Technical Skills</h2>
+            <p><strong>Programming Languages:</strong> Python, Shell scripting</p>
+            <p><strong>Frameworks:</strong> Flask, Django, REST</p>
+            <p><strong>Platforms:</strong> Windows, Linux</p>
+            <p><strong>Web Technologies:</strong> HTML, CSS, REST API</p>
+            <p><strong>IDEs:</strong> PyCharm, Atom, VS Code</p>
+            <p><strong>Database:</strong> MySQL, PostgreSQL, Rapid SQL</p>
+            <p><strong>Tools:</strong> GIT, Docker, Bamboo, Kafka, Bitbucket</p>
+        </section>
+
+        <section class="projects">
+            <h2>Project Details</h2>
+            <div class="project-item">
+                <h3>Wealth Management</h3>
+                <p><strong>Role:</strong> Python Developer</p>
+                <p><strong>Client:</strong> L&T Mindtree</p>
+                <p><strong>Team Size:</strong> 6</p>
+                <p><strong>Description:</strong> Involved in database systems using PostgreSQL, Rapid SQL, Python development, shell scripting, and Flask framework. Contributed to designing, implementing, and optimizing database solutions, and developed custom scripts and tools for task automation and workflow optimization.</p>
+            </div>
+            <div class="project-item">
+                <h3>Core Banking Solutions</h3>
+                <p><strong>Role:</strong> Developer</p>
+                <p><strong>Team Size:</strong> 8</p>
+                <p><strong>Description:</strong> Developed electronic payment systems such as IMPS, UPI, Net Banking, Payment Gateway, and Mobile banking services integrated with the Finacle core banking system. Participated in Scrum calls, wrote queries, and was responsible for project planning, scheduling, and coding.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mahendra Bandla. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+{% endblock body %}

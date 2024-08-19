@@ -1,0 +1,31 @@
+{% extends "basic.html" %} {% load static %} {% block title %} blog
+{%endblock title %} 
+{% block body %}
+
+<!-- Services Section -->
+<section id="services" class="services section">
+
+    <!-- Section Title -->
+    <div class="container">
+
+      <div class="row gy-4">
+{% for post in posts  %}
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-4">
+            {% comment %} <img src="{{post.img.url}}" class="img-fluid" alt=""> {% endcomment %}
+      </div>
+        <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+        <div>
+          <h4 class="title"><a href="service-details.html" class="stretched-link">{{post.title}}</a></h4>
+          <p class="">{{post.description}}</p>
+          {% comment %} <p class="">POSTED ON :{{post.timestamp}}</p> {% endcomment %}
+          <p class="">POSTED BY {{post.authname}}</p>
+          
+        </div>
+      </div>
+
+{% endfor %}
+        </div>
+    </div>
+{% endblock body %}
+  

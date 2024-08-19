@@ -1,0 +1,173 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block title %} portfolio {% endblock title %} 
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        header {
+            background: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        section {
+            padding: 60px 0;
+        }
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            color: #343a40;
+        }
+        .intro, .projects, .blog-posts, .contact, .resume {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .project-item, .blog-post {
+            margin-bottom: 20px;
+        }
+        .project-item img, .blog-post img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mahendra Bandla</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+            <a href="#resume">Resume</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about" class="intro">
+            <h2>About Me</h2>
+            <p>Hi, I'm Mahendra Bandla, a Python Developer with 2.9 years of experience in creating dynamic web applications using Python and frameworks like Django and Flask. My passion for technology drives me to continuously learn and adapt to new challenges. I have worked on a variety of projects, from financial applications to custom automation solutions, and I am committed to delivering high-quality, user-centered solutions.</p>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-item">
+                <h3>Custom Blog Application</h3>
+                <img src="path/to/image.jpg" alt="Custom Blog Application">
+                <p>A robust and scalable custom blog application with features such as user authentication, content management, responsive design, SEO optimization, comment system, and analytics integration.</p>
+            </div>
+            <!-- Add more projects here -->
+        </section>
+
+        <section id="blog" class="blog-posts">
+            <h2>Blog Posts</h2>
+            <div class="blog-post">
+                <h3>Understanding Django Models</h3>
+                <p>An in-depth look at how Django models work, including best practices for designing and implementing models in your Django applications.</p>
+            </div>
+            <!-- Add more blog posts here -->
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="contact_form_submission_url" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <section id="resume" class="resume">
+            <h2>Resume</h2>
+            <a href="path/to/resume.pdf" download>Download My Resume</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mahendra Bandla. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+{% endblock body %}
